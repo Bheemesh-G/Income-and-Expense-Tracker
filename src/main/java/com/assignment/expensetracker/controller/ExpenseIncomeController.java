@@ -47,7 +47,7 @@ public class ExpenseIncomeController {
      return new ResponseEntity<>(list,HttpStatus.OK);
     }
 
-    @PostMapping("/upload")
+    @PostMapping("/api/upload")
     public ResponseEntity<String> uploadTransactions(@RequestParam("file") MultipartFile file) {
         try {
             expenseIncomeService.processFile(file);
